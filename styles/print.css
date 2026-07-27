@@ -1,0 +1,108 @@
+/* ==========================================================
+   Academic Competency Portfolio
+   print.css
+   Version 1.0
+========================================================== */
+
+@page {
+
+    size: A4;
+
+    margin: 10mm;
+
+}
+
+.print-mode *,
+.print-mode *::before,
+.print-mode *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+}
+
+@media print {
+
+    nav {
+
+        break-before: avoid;
+
+        break-after: avoid;
+
+        page-break-before: avoid;
+
+        page-break-after: avoid;
+
+    }
+
+    section:not(:first-of-type) {
+
+        break-before: page;
+
+    }
+
+    section {
+
+        padding-top: 8mm;
+
+        break-inside: avoid;
+
+    }
+
+    .pdf-container {
+
+        display: none !important;
+
+    }
+
+    #pdf-container {
+
+        display: none !important;
+
+    }
+
+    .buttons {
+
+        display: none !important;
+
+    }
+
+    .button {
+
+        display: none !important;
+
+    }
+
+    .text {
+    
+        page-break-before: always;
+    
+        padding-top: 8mm;
+
+    }
+
+    .note {
+
+        padding-top: 8mm;
+
+    }
+
+    .notice {
+
+        display: none !important;
+
+    }
+
+    .reveal,
+    .reveal.active {
+
+        opacity: 1 !important;
+
+        transform: translateY(0) !important;
+
+        animation: none !important;
+
+    }
+
+}
