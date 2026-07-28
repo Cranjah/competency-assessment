@@ -255,3 +255,32 @@ function initPrintButton() {
     });
 
 }
+
+
+/* ==========================================================
+   HAMBURGER MENU
+========================================================== */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navList = document.querySelector("nav ul");
+
+if (menuToggle && navList) {
+
+    menuToggle.addEventListener("click", () => {
+
+        navList.classList.toggle("active");
+
+        const isOpen = navList.classList.contains("active");
+
+        menuToggle.setAttribute("aria-expanded", isOpen);
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Menü schließen" : "Menü öffnen"
+        );
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+
+    });
+
+}

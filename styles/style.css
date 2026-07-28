@@ -507,6 +507,12 @@ th,td {
 
 }
 
+.menu-toggle {
+
+    display: none;
+
+}
+
 
 /* ==========================================================
    RESPONSIVE
@@ -532,6 +538,72 @@ th,td {
     .hero {
 
         padding: 80px 30px;
+
+    }
+
+    nav {
+
+        position: relative;
+
+    }
+
+    nav ul {
+
+        display: none;
+
+        flex-direction: column;
+
+        justify-content: flex-start;
+
+        overflow: visible;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 10px 0;
+
+    }
+
+    nav ul.active {
+
+        display: flex;
+
+    }
+
+    nav li {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+    nav a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 20px;
+
+    }
+
+    .menu-toggle {
+
+        display: block;
+
+        margin: 0 auto;
+
+        padding: 8px 14px;
+
+        border: none;
+
+        background: transparent;
+
+        font-size: 28px;
+
+        cursor: pointer;
 
     }
 
